@@ -8,11 +8,15 @@ var abiMaintenance = [{"constant":true,"inputs":[{"name":"","type":"uint256"}],"
 var provider = new Web3.providers.HttpProvider("http://visionuiwqqf.westeurope.cloudapp.azure.com:8545");
 var client = new Web3();
 client.setProvider(provider);
-//var base = client.eth.getCoinbase().then(_d);
-//client.eth.getAccounts().then(_d);
+
+var accountId = "0x94734e97f6f627619d1fa7ea5935925e2e08b7dd";
 
 var fc  = new client.eth.Contract(abiFridge,'0x38478939c083ea0723813988ff52418c4be4a5bf');
+
+//Nur der Call
 var r = fc.methods.giveColaToThomas().call();
 r.then(_d);
 
-
+//Transaktion
+//r = fc.methods.giveColaToThomas().send({from:accountId,gas:240000});
+//r.then(_d);
