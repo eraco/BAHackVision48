@@ -3,7 +3,7 @@ pragma solidity ^0.4.17;
 /*
 * Vertrag fuer eine Menge an Geraeten
 */
-contract MaintenanceContract {
+contract DeviceContract {
 
     //Entitaet: Unsere Geraet
     struct Device {
