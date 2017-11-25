@@ -16,10 +16,16 @@ var fc  = new client.eth.Contract(abiFridge,'0x38478939c083ea0723813988ff52418c4
 
 var serv = Exp();
 serv.get('/givecola/:id', function(req, res) {
+    var promise = fc.methods.giveColaToThomas().call();
 
-    res.send(fc.methods.giveColaToThomas().call());
+    promise.then( (result) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.send(JSON.stringify({bestand:result}));
+    });
+    
 });
 
+_d("server is running");
 serv.listen(3000);
 
 //Nur der Call
