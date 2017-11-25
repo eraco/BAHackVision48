@@ -14,17 +14,29 @@ var accountId = "0x94734e97f6f627619d1fa7ea5935925e2e08b7dd";
 
 var fc  = new client.eth.Contract(abiFridge,'0x38478939c083ea0723813988ff52418c4be4a5bf');
 
+function sendJsonAnswer(res,str) {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(str);
+}
+
+function sendJsonObject(res,o) {
+    sendJsonAnswer(res,JSON.stringify(o));
+}
+
 var serv = Exp();
 serv.get('/givecola/:id', function(req, res) {
     var promise = fc.methods.giveColaToThomas().call();
 
     promise.then( (result) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.send(JSON.stringify({bestand:result}));
+        sendJsonObject(res,{bestand:result});
     });
     
 });
 
+serv.get('/test', function(req, res) {
+    sendJsonObject(res,{test:true});
+});
+    
 _d("server is running");
 serv.listen(3000);
 
