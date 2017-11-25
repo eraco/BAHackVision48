@@ -1,4 +1,5 @@
 var Web3 = require("web3");
+var Exp = require('express')
 
 function _d(o) { console.log(o); }
 
@@ -13,9 +14,17 @@ var accountId = "0x94734e97f6f627619d1fa7ea5935925e2e08b7dd";
 
 var fc  = new client.eth.Contract(abiFridge,'0x38478939c083ea0723813988ff52418c4be4a5bf');
 
+var serv = Exp();
+serv.get('/givecola/:id', function(req, res) {
+
+    res.send(fc.methods.giveColaToThomas().call());
+});
+
+serv.listen(3000);
+
 //Nur der Call
-var r = fc.methods.giveColaToThomas().call();
-r.then(_d);
+// var r = fc.methods.giveColaToThomas().call();
+// r.then(_d);
 
 //Transaktion
 //r = fc.methods.giveColaToThomas().send({from:accountId,gas:240000});
