@@ -16,18 +16,18 @@
       "type": "function"
     },
     {
-      "inputs": [],
-      "payable": false,
-      "stateMutability": "nonpayable",
-      "type": "function",
       "constant": false,
+      "inputs": [],
       "name": "getStock",
       "outputs": [
         {
           "name": "stock",
           "type": "uint256"
         }
-      ]
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
       "constant": false,
@@ -249,11 +249,6 @@
             },
             "children": [
               {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
                 "children": [
                   {
                     "attributes": {
@@ -287,11 +282,6 @@
                 "src": "150:10:1"
               },
               {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
                 "children": [
                   {
                     "attributes": {
@@ -385,19 +375,12 @@
                               {
                                 "attributes": {
                                   "argumentTypes": null,
-                                  "hexvalue": "31",
-                                  "isConstant": false,
-                                  "isLValue": false,
-                                  "isPure": true,
-                                  "lValueRequested": false,
-                                  "subdenomination": null,
-                                  "token": "number",
-                                  "type": "uint256",
-                                  "value": "add",
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 157
+                                  "referencedDeclaration": 157,
+                                  "type": "uint256",
+                                  "value": "add"
                                 },
                                 "id": 164,
                                 "name": "Identifier",
@@ -750,14 +733,9 @@
     "72": {
       "events": {},
       "links": {},
-      "address": "0x38478939c083ea0723813988ff52418c4be4a5bf"
-    },
-    "4447": {
-      "events": {},
-      "links": {},
-      "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10"
+      "address": "0xf9a4d3c061e692b5fe552e96ee820e8051e7fc30"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-25T19:58:08.098Z"
+  "updatedAt": "2017-11-26T10:32:39.958Z"
 }

@@ -7,10 +7,6 @@
         {
           "name": "",
           "type": "uint256"
-        },
-        {
-          "name": "deviceName",
-          "type": "string"
         }
       ],
       "name": "devices",
@@ -42,35 +38,27 @@
         {
           "name": "deviceId",
           "type": "uint256"
-        },
-        {
-          "name": "deviceName",
-          "type": "string"
         }
       ],
       "name": "resetInspectionHoursOfDevice",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "deviceId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getHoursSinceLastInspectionById",
       "outputs": [
         {
-          "name": "myDevice",
-          "type": "tuple",
-          "components": [
-            {
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "name": "totalUsedHours",
-              "type": "uint256"
-            },
-            {
-              "name": "hoursSinceLastInspection",
-              "type": "uint256"
-            },
-            {
-              "name": "active",
-              "type": "bool"
-            }
-          ]
+          "name": "",
+          "type": "uint256"
         }
       ],
       "payable": false,
@@ -90,12 +78,7 @@
         }
       ],
       "name": "addDevice",
-      "outputs": [
-        {
-          "name": "newTotalUsedHours",
-          "type": "uint256"
-        }
-      ],
+      "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
@@ -115,7 +98,7 @@
       "name": "bookUsedHours",
       "outputs": [
         {
-          "name": "newTotalUsedHours",
+          "name": "",
           "type": "uint256"
         }
       ],
@@ -132,29 +115,24 @@
         }
       ],
       "name": "deactivateDeviceById",
-      "outputs": [
-        {
-          "name": "totalUsedHours",
-          "type": "uint256"
-        }
-      ],
+      "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b6104608061001e6000396000f30060606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806310ff8e31146100725780633a989ace14610144578063a373761814610167578063dbdeadb6146101cd578063e25871871461020d575b600080fd5b341561007d57600080fd5b6100936004808035906020019091905050610230565b6040518080602001858152602001848152602001831515151581526020018281038252868181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101325780601f1061010757610100808354040283529160200191610132565b820191906000526020600020905b81548152906001019060200180831161011557829003601f168201915b50509550505050505060405180910390f35b341561014f57600080fd5b610165600480803590602001909190505061026c565b005b341561017257600080fd5b6101cb600480803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061028a565b005b34156101d857600080fd5b6101f7600480803590602001909190803590602001909190505061031b565b6040518082815260200191505060405180910390f35b341561021857600080fd5b61022e600480803590602001909190505061035e565b005b600060205280600052604060002060009150905080600001908060010154908060020154908060030160009054906101000a900460ff16905084565b60008060008381526020019081526020016000206002018190555050565b60806040519081016040528082815260200160008152602001600081526020016001151581525060008084815260200190815260200160002060008201518160000190805190602001906102df92919061038f565b50602082015181600101556040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055509050505050565b6000806000808581526020019081526020016000209050828160010154018160010181905550828160020154018160020181905550806001015491505092915050565b600080600083815260200190815260200160002060030160006101000a81548160ff02191690831515021790555050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103d057805160ff19168380011785556103fe565b828001600101855582156103fe579182015b828111156103fd5782518255916020019190600101906103e2565b5b50905061040b919061040f565b5090565b61043191905b8082111561042d576000816000905550600101610415565b5090565b905600a165627a7a7230582079844a096bd18518fa89a08d3b8b9cf654ab38a7f74a20a8e886e5af46992b330029",
-  "deployedBytecode": "0x60606040526004361061006d576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806310ff8e31146100725780633a989ace14610144578063a373761814610167578063dbdeadb6146101cd578063e25871871461020d575b600080fd5b341561007d57600080fd5b6100936004808035906020019091905050610230565b6040518080602001858152602001848152602001831515151581526020018281038252868181546001816001161561010002031660029004815260200191508054600181600116156101000203166002900480156101325780601f1061010757610100808354040283529160200191610132565b820191906000526020600020905b81548152906001019060200180831161011557829003601f168201915b50509550505050505060405180910390f35b341561014f57600080fd5b610165600480803590602001909190505061026c565b005b341561017257600080fd5b6101cb600480803590602001909190803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061028a565b005b34156101d857600080fd5b6101f7600480803590602001909190803590602001909190505061031b565b6040518082815260200191505060405180910390f35b341561021857600080fd5b61022e600480803590602001909190505061035e565b005b600060205280600052604060002060009150905080600001908060010154908060020154908060030160009054906101000a900460ff16905084565b60008060008381526020019081526020016000206002018190555050565b60806040519081016040528082815260200160008152602001600081526020016001151581525060008084815260200190815260200160002060008201518160000190805190602001906102df92919061038f565b50602082015181600101556040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055509050505050565b6000806000808581526020019081526020016000209050828160010154018160010181905550828160020154018160020181905550806001015491505092915050565b600080600083815260200190815260200160002060030160006101000a81548160ff02191690831515021790555050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103d057805160ff19168380011785556103fe565b828001600101855582156103fe579182015b828111156103fd5782518255916020019190600101906103e2565b5b50905061040b919061040f565b5090565b61043191905b8082111561042d576000816000905550600101610415565b5090565b905600a165627a7a7230582079844a096bd18518fa89a08d3b8b9cf654ab38a7f74a20a8e886e5af46992b330029",
-  "sourceMap": "75:1232:1:-;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "75:1232:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;288:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;912:125;;;;;;;;;;;;;;;;;;;;;;;;;;425:126;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;559:345;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1199:103;;;;;;;;;;;;;;;;;;;;;;;;;;288:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;912:125::-;1028:1;983:7;:17;991:8;983:17;;;;;;;;;;;:42;;:46;;;;912:125;:::o;425:126::-;516:27;;;;;;;;;523:10;516:27;;;;534:1;516:27;;;;536:1;516:27;;;;538:4;516:27;;;;;496:7;:17;504:8;496:17;;;;;;;;;;;:47;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;425:126;;:::o;559:345::-;629:22;664:8;675:7;:17;683:8;675:17;;;;;;;;;;;664:28;;741:9;722:1;:16;;;:28;703:1;:16;;:47;;;;819:9;790:1;:26;;;:38;761:1;:26;;:67;;;;880:1;:16;;;873:23;;559:345;;;;;:::o;1199:103::-;1289:5;1262:7;:17;1270:8;1262:17;;;;;;;;;;;:24;;;:32;;;;;;;;;;;;;;;;;;1199:103;:::o;75:1232::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
-  "source": "pragma solidity ^0.4.17;\r\n\r\n/*\r\n* Vertrag fuer eine Menge an Geraeten\r\n*/\r\ncontract MaintenanceContract {\r\n\r\n    //Entitaet: Unsere Geraet\r\n    struct Device {\r\n        string name;\r\n        uint totalUsedHours;\r\n        uint hoursSinceLastInspection;\r\n        bool active;\r\n    }\r\n\r\n    mapping (uint => Device) public devices;\r\n\r\n    //erzeugt ein neues Geraet, ID muss eindeutig sein und darf vorher nicht existieren\r\n    function addDevice(uint deviceId, string deviceName) public {\r\n        devices[deviceId] = Device(deviceName,0,0,true);\r\n    }\r\n\r\n    function bookUsedHours(uint deviceId, uint hoursUsed) public returns (uint newTotalUsedHours) {\r\n        Device d = devices[deviceId];\r\n        d.totalUsedHours = d.totalUsedHours + hoursUsed;\r\n        d.hoursSinceLastInspection = d.hoursSinceLastInspection + hoursUsed;\r\n        //devices[deviceId] = d;\r\n        return d.totalUsedHours;\r\n    }\r\n\r\n    function resetInspectionHoursOfDevice(uint deviceId) public {\r\n        devices[deviceId].hoursSinceLastInspection = 0;\r\n    }\r\n\r\n    /*function getTotalUsedHoursById(uint deviceId) public returns (uint totalUsedHours) {\r\n        return devices[deviceId].totalUsedHours; \r\n    }*/\r\n\r\n    function deactivateDeviceById(uint deviceId) public {\r\n        devices[deviceId].active = false;\r\n    }\r\n\r\n}\r\n",
-  "sourcePath": "C:\\Users\\nwieb\\Documents\\GitHub\\BAHackVision48\\contracts\\MaintenanceContract.sol",
+  "bytecode": "0x6060604052341561000f57600080fd5b6104c68061001e6000396000f300606060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806310ff8e311461007d5780633a989ace1461014f5780639ef70c1114610172578063a3737618146101a9578063dbdeadb61461020f578063e25871871461024f575b600080fd5b341561008857600080fd5b61009e6004808035906020019091905050610272565b60405180806020018581526020018481526020018315151515815260200182810382528681815460018160011615610100020316600290048152602001915080546001816001161561010002031660029004801561013d5780601f106101125761010080835404028352916020019161013d565b820191906000526020600020905b81548152906001019060200180831161012057829003601f168201915b50509550505050505060405180910390f35b341561015a57600080fd5b61017060048080359060200190919050506102ae565b005b341561017d57600080fd5b61019360048080359060200190919050506102cc565b6040518082815260200191505060405180910390f35b34156101b457600080fd5b61020d600480803590602001909190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506102f0565b005b341561021a57600080fd5b6102396004808035906020019091908035906020019091905050610381565b6040518082815260200191505060405180910390f35b341561025a57600080fd5b61027060048080359060200190919050506103c4565b005b600060205280600052604060002060009150905080600001908060010154908060020154908060030160009054906101000a900460ff16905084565b60008060008381526020019081526020016000206002018190555050565b60008060008084815260200190815260200160002060020154905080915050919050565b60806040519081016040528082815260200160008152602001600081526020016001151581525060008084815260200190815260200160002060008201518160000190805190602001906103459291906103f5565b50602082015181600101556040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055509050505050565b6000806000808581526020019081526020016000209050828160010154018160010181905550828160020154018160020181905550806001015491505092915050565b600080600083815260200190815260200160002060030160006101000a81548160ff02191690831515021790555050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061043657805160ff1916838001178555610464565b82800160010185558215610464579182015b82811115610463578251825591602001919060010190610448565b5b5090506104719190610475565b5090565b61049791905b8082111561049357600081600090555060010161047b565b5090565b905600a165627a7a72305820fcbd53aff75c972a574e1a508ee6dc63937bf16625807dfb713d5092c1f276580029",
+  "deployedBytecode": "0x606060405260043610610078576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806310ff8e311461007d5780633a989ace1461014f5780639ef70c1114610172578063a3737618146101a9578063dbdeadb61461020f578063e25871871461024f575b600080fd5b341561008857600080fd5b61009e6004808035906020019091905050610272565b60405180806020018581526020018481526020018315151515815260200182810382528681815460018160011615610100020316600290048152602001915080546001816001161561010002031660029004801561013d5780601f106101125761010080835404028352916020019161013d565b820191906000526020600020905b81548152906001019060200180831161012057829003601f168201915b50509550505050505060405180910390f35b341561015a57600080fd5b61017060048080359060200190919050506102ae565b005b341561017d57600080fd5b61019360048080359060200190919050506102cc565b6040518082815260200191505060405180910390f35b34156101b457600080fd5b61020d600480803590602001909190803590602001908201803590602001908080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050919050506102f0565b005b341561021a57600080fd5b6102396004808035906020019091908035906020019091905050610381565b6040518082815260200191505060405180910390f35b341561025a57600080fd5b61027060048080359060200190919050506103c4565b005b600060205280600052604060002060009150905080600001908060010154908060020154908060030160009054906101000a900460ff16905084565b60008060008381526020019081526020016000206002018190555050565b60008060008084815260200190815260200160002060020154905080915050919050565b60806040519081016040528082815260200160008152602001600081526020016001151581525060008084815260200190815260200160002060008201518160000190805190602001906103459291906103f5565b50602082015181600101556040820151816002015560608201518160030160006101000a81548160ff0219169083151502179055509050505050565b6000806000808581526020019081526020016000209050828160010154018160010181905550828160020154018160020181905550806001015491505092915050565b600080600083815260200190815260200160002060030160006101000a81548160ff02191690831515021790555050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061043657805160ff1916838001178555610464565b82800160010185558215610464579182015b82811115610463578251825591602001919060010190610448565b5b5090506104719190610475565b5090565b61049791905b8082111561049357600081600090555060010161047b565b5090565b905600a165627a7a72305820fcbd53aff75c972a574e1a508ee6dc63937bf16625807dfb713d5092c1f276580029",
+  "sourceMap": "75:1998:2:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "75:1998:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;314:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1108:125;;;;;;;;;;;;;;;;;;;;;;;;;;928:172;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;451:126;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;585:335;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1511:103;;;;;;;;;;;;;;;;;;;;;;;;;;314:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1108:125::-;1224:1;1179:7;:17;1187:8;1179:17;;;;;;;;;;;:42;;:46;;;;1108:125;:::o;928:172::-;1000:4;1017:9;1029:7;:17;1037:8;1029:17;;;;;;;;;;;:42;;;1017:54;;1089:3;1082:10;;928:172;;;;:::o;451:126::-;542:27;;;;;;;;;549:10;542:27;;;;560:1;542:27;;;;562:1;542:27;;;;564:4;542:27;;;;;522:7;:17;530:8;522:17;;;;;;;;;;;:47;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;451:126;;:::o;585:335::-;655:4;672:16;691:7;:17;699:8;691:17;;;;;;;;;;;672:36;;757:9;738:1;:16;;;:28;719:1;:16;;:47;;;;835:9;806:1;:26;;;:38;777:1;:26;;:67;;;;896:1;:16;;;889:23;;585:335;;;;;:::o;1511:103::-;1601:5;1574:7;:17;1582:8;1574:17;;;;;;;;;;;:24;;;:32;;;;;;;;;;;;;;;;;;1511:103;:::o;75:1998::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.17;\r\n\r\n/*\r\n* Vertrag fuer eine Menge an Geraeten\r\n*/\r\ncontract MaintenanceContract {\r\n\r\n    //Entitaet: Unsere Geraet\r\n    struct Device {\r\n        string name;\r\n        uint totalUsedHours;\r\n        uint hoursSinceLastInspection;\r\n        bool active;\r\n        //address owner;\r\n    }\r\n\r\n    mapping (uint => Device) public devices;\r\n\r\n    //erzeugt ein neues Geraet, ID muss eindeutig sein und darf vorher nicht existieren\r\n    function addDevice(uint deviceId, string deviceName) public {\r\n        devices[deviceId] = Device(deviceName,0,0,true);\r\n    }\r\n\r\n    function bookUsedHours(uint deviceId, uint hoursUsed) public returns (uint) {\r\n        Device storage d = devices[deviceId];\r\n        d.totalUsedHours = d.totalUsedHours + hoursUsed;\r\n        d.hoursSinceLastInspection = d.hoursSinceLastInspection + hoursUsed;\r\n        //devices[deviceId] = d;\r\n        return d.totalUsedHours;\r\n    }\r\n\r\n    function getHoursSinceLastInspectionById(uint deviceId) public returns (uint) {\r\n        uint  hrs = devices[deviceId].hoursSinceLastInspection;\r\n        return hrs;\r\n    }\r\n\r\n    function resetInspectionHoursOfDevice(uint deviceId) public {\r\n        devices[deviceId].hoursSinceLastInspection = 0;\r\n    }\r\n\r\n    /*function getDeviceById(uint deviceId) public returns(Device) {\r\n        return devices[deviceId];\r\n    }*/\r\n\r\n    /*function getTotalUsedHoursById(uint deviceId) public returns (uint totalUsedHours) {\r\n        return devices[deviceId].totalUsedHours; \r\n    }*/\r\n\r\n    function deactivateDeviceById(uint deviceId) public {\r\n        devices[deviceId].active = false;\r\n    }\r\n\r\n    //uebertraegt ownership an neue adresse, sender muss aktueller owner sein\r\n    /*function transferOwnership(uint deviceId, address newOwner) public {\r\n        if (devices[deviceId].owner == msg.sender) {\r\n            if (newOwner != 0x0) {\r\n              devices[deviceId].owner = newOwner;  \r\n            }\r\n        }\r\n    }\r\n\r\n    function getCurrentOwner(uint deviceId) public returns(address) {\r\n        return devices[deviceId].owner;\r\n    }*/\r\n}\r\n",
+  "sourcePath": "D:\\arbeit\\blockchain\\BAHackVision48\\contracts\\MaintenanceContract.sol",
   "ast": {
     "attributes": {
-      "absolutePath": "/C/Users/nwieb/Documents/GitHub/BAHackVision48/contracts/MaintenanceContract.sol",
+      "absolutePath": "/D/arbeit/blockchain/BAHackVision48/contracts/MaintenanceContract.sol",
       "exportedSymbols": {
         "MaintenanceContract": [
-          148
+          309
         ]
       }
     },
@@ -168,9 +146,9 @@
             ".17"
           ]
         },
-        "id": 52,
+        "id": 196,
         "name": "PragmaDirective",
-        "src": "0:24:1"
+        "src": "0:24:2"
       },
       {
         "attributes": {
@@ -184,17 +162,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            148
+            309
           ],
           "name": "MaintenanceContract",
-          "scope": 149
+          "scope": 310
         },
         "children": [
           {
             "attributes": {
               "canonicalName": "MaintenanceContract.Device",
               "name": "Device",
-              "scope": 148,
+              "scope": 309,
               "visibility": "public"
             },
             "children": [
@@ -202,7 +180,7 @@
                 "attributes": {
                   "constant": false,
                   "name": "name",
-                  "scope": 61,
+                  "scope": 205,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "string storage pointer",
@@ -215,20 +193,20 @@
                       "name": "string",
                       "type": "string storage pointer"
                     },
-                    "id": 53,
+                    "id": 197,
                     "name": "ElementaryTypeName",
-                    "src": "169:6:1"
+                    "src": "169:6:2"
                   }
                 ],
-                "id": 54,
+                "id": 198,
                 "name": "VariableDeclaration",
-                "src": "169:11:1"
+                "src": "169:11:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "totalUsedHours",
-                  "scope": 61,
+                  "scope": 205,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -241,20 +219,20 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 55,
+                    "id": 199,
                     "name": "ElementaryTypeName",
-                    "src": "191:4:1"
+                    "src": "191:4:2"
                   }
                 ],
-                "id": 56,
+                "id": 200,
                 "name": "VariableDeclaration",
-                "src": "191:19:1"
+                "src": "191:19:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "hoursSinceLastInspection",
-                  "scope": 61,
+                  "scope": 205,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "uint256",
@@ -267,20 +245,20 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 57,
+                    "id": 201,
                     "name": "ElementaryTypeName",
-                    "src": "221:4:1"
+                    "src": "221:4:2"
                   }
                 ],
-                "id": 58,
+                "id": 202,
                 "name": "VariableDeclaration",
-                "src": "221:29:1"
+                "src": "221:29:2"
               },
               {
                 "attributes": {
                   "constant": false,
                   "name": "active",
-                  "scope": 61,
+                  "scope": 205,
                   "stateVariable": false,
                   "storageLocation": "default",
                   "type": "bool",
@@ -293,25 +271,25 @@
                       "name": "bool",
                       "type": "bool"
                     },
-                    "id": 59,
+                    "id": 203,
                     "name": "ElementaryTypeName",
-                    "src": "261:4:1"
+                    "src": "261:4:2"
                   }
                 ],
-                "id": 60,
+                "id": 204,
                 "name": "VariableDeclaration",
-                "src": "261:11:1"
+                "src": "261:11:2"
               }
             ],
-            "id": 61,
+            "id": 205,
             "name": "StructDefinition",
-            "src": "144:136:1"
+            "src": "144:162:2"
           },
           {
             "attributes": {
               "constant": false,
               "name": "devices",
-              "scope": 148,
+              "scope": 309,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
@@ -329,30 +307,30 @@
                       "name": "uint",
                       "type": "uint256"
                     },
-                    "id": 62,
+                    "id": 206,
                     "name": "ElementaryTypeName",
-                    "src": "297:4:1"
+                    "src": "323:4:2"
                   },
                   {
                     "attributes": {
                       "contractScope": null,
                       "name": "Device",
-                      "referencedDeclaration": 61,
+                      "referencedDeclaration": 205,
                       "type": "struct MaintenanceContract.Device storage pointer"
                     },
-                    "id": 63,
+                    "id": 207,
                     "name": "UserDefinedTypeName",
-                    "src": "305:6:1"
+                    "src": "331:6:2"
                   }
                 ],
-                "id": 64,
+                "id": 208,
                 "name": "Mapping",
-                "src": "288:24:1"
+                "src": "314:24:2"
               }
             ],
-            "id": 65,
+            "id": 209,
             "name": "VariableDeclaration",
-            "src": "288:39:1"
+            "src": "314:39:2"
           },
           {
             "attributes": {
@@ -364,7 +342,7 @@
               ],
               "name": "addDevice",
               "payable": false,
-              "scope": 148,
+              "scope": 309,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -376,7 +354,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "deviceId",
-                      "scope": 84,
+                      "scope": 228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -389,20 +367,20 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 66,
+                        "id": 210,
                         "name": "ElementaryTypeName",
-                        "src": "444:4:1"
+                        "src": "470:4:2"
                       }
                     ],
-                    "id": 67,
+                    "id": 211,
                     "name": "VariableDeclaration",
-                    "src": "444:13:1"
+                    "src": "470:13:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "deviceName",
-                      "scope": 84,
+                      "scope": 228,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "string memory",
@@ -415,19 +393,19 @@
                           "name": "string",
                           "type": "string storage pointer"
                         },
-                        "id": 68,
+                        "id": 212,
                         "name": "ElementaryTypeName",
-                        "src": "459:6:1"
+                        "src": "485:6:2"
                       }
                     ],
-                    "id": 69,
+                    "id": 213,
                     "name": "VariableDeclaration",
-                    "src": "459:17:1"
+                    "src": "485:17:2"
                   }
                 ],
-                "id": 70,
+                "id": 214,
                 "name": "ParameterList",
-                "src": "443:34:1"
+                "src": "469:34:2"
               },
               {
                 "attributes": {
@@ -436,9 +414,9 @@
                   ]
                 },
                 "children": [],
-                "id": 71,
+                "id": 215,
                 "name": "ParameterList",
-                "src": "485:0:1"
+                "src": "511:0:2"
               },
               {
                 "children": [
@@ -471,13 +449,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 65,
+                                  "referencedDeclaration": 209,
                                   "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
                                   "value": "devices"
                                 },
-                                "id": 72,
+                                "id": 216,
                                 "name": "Identifier",
-                                "src": "496:7:1"
+                                "src": "522:7:2"
                               },
                               {
                                 "attributes": {
@@ -485,18 +463,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 67,
+                                  "referencedDeclaration": 211,
                                   "type": "uint256",
                                   "value": "deviceId"
                                 },
-                                "id": 73,
+                                "id": 217,
                                 "name": "Identifier",
-                                "src": "504:8:1"
+                                "src": "530:8:2"
                               }
                             ],
-                            "id": 74,
+                            "id": 218,
                             "name": "IndexAccess",
-                            "src": "496:17:1"
+                            "src": "522:17:2"
                           },
                           {
                             "attributes": {
@@ -536,13 +514,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 61,
+                                  "referencedDeclaration": 205,
                                   "type": "type(struct MaintenanceContract.Device storage pointer)",
                                   "value": "Device"
                                 },
-                                "id": 75,
+                                "id": 219,
                                 "name": "Identifier",
-                                "src": "516:6:1"
+                                "src": "542:6:2"
                               },
                               {
                                 "attributes": {
@@ -550,13 +528,13 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 69,
+                                  "referencedDeclaration": 213,
                                   "type": "string memory",
                                   "value": "deviceName"
                                 },
-                                "id": 76,
+                                "id": 220,
                                 "name": "Identifier",
-                                "src": "523:10:1"
+                                "src": "549:10:2"
                               },
                               {
                                 "attributes": {
@@ -571,9 +549,9 @@
                                   "type": "int_const 0",
                                   "value": "0"
                                 },
-                                "id": 77,
+                                "id": 221,
                                 "name": "Literal",
-                                "src": "534:1:1"
+                                "src": "560:1:2"
                               },
                               {
                                 "attributes": {
@@ -588,9 +566,9 @@
                                   "type": "int_const 0",
                                   "value": "0"
                                 },
-                                "id": 78,
+                                "id": 222,
                                 "name": "Literal",
-                                "src": "536:1:1"
+                                "src": "562:1:2"
                               },
                               {
                                 "attributes": {
@@ -605,34 +583,34 @@
                                   "type": "bool",
                                   "value": "true"
                                 },
-                                "id": 79,
+                                "id": 223,
                                 "name": "Literal",
-                                "src": "538:4:1"
+                                "src": "564:4:2"
                               }
                             ],
-                            "id": 80,
+                            "id": 224,
                             "name": "FunctionCall",
-                            "src": "516:27:1"
+                            "src": "542:27:2"
                           }
                         ],
-                        "id": 81,
+                        "id": 225,
                         "name": "Assignment",
-                        "src": "496:47:1"
+                        "src": "522:47:2"
                       }
                     ],
-                    "id": 82,
+                    "id": 226,
                     "name": "ExpressionStatement",
-                    "src": "496:47:1"
+                    "src": "522:47:2"
                   }
                 ],
-                "id": 83,
+                "id": 227,
                 "name": "Block",
-                "src": "485:66:1"
+                "src": "511:66:2"
               }
             ],
-            "id": 84,
+            "id": 228,
             "name": "FunctionDefinition",
-            "src": "425:126:1"
+            "src": "451:126:2"
           },
           {
             "attributes": {
@@ -644,7 +622,7 @@
               ],
               "name": "bookUsedHours",
               "payable": false,
-              "scope": 148,
+              "scope": 309,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -656,7 +634,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "deviceId",
-                      "scope": 121,
+                      "scope": 265,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -669,20 +647,20 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 85,
+                        "id": 229,
                         "name": "ElementaryTypeName",
-                        "src": "582:4:1"
+                        "src": "608:4:2"
                       }
                     ],
-                    "id": 86,
+                    "id": 230,
                     "name": "VariableDeclaration",
-                    "src": "582:13:1"
+                    "src": "608:13:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "hoursUsed",
-                      "scope": 121,
+                      "scope": 265,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -695,32 +673,27 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 87,
+                        "id": 231,
                         "name": "ElementaryTypeName",
-                        "src": "597:4:1"
+                        "src": "623:4:2"
                       }
                     ],
-                    "id": 88,
+                    "id": 232,
                     "name": "VariableDeclaration",
-                    "src": "597:14:1"
+                    "src": "623:14:2"
                   }
                 ],
-                "id": 89,
+                "id": 233,
                 "name": "ParameterList",
-                "src": "581:31:1"
+                "src": "607:31:2"
               },
               {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
                 "children": [
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "newTotalUsedHours",
-                      "scope": 121,
+                      "name": "",
+                      "scope": 265,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -733,122 +706,56 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 90,
+                        "id": 234,
                         "name": "ElementaryTypeName",
-                        "src": "629:4:1"
+                        "src": "655:4:2"
                       }
                     ],
-                    "id": 91,
+                    "id": 235,
                     "name": "VariableDeclaration",
-                    "src": "629:22:1"
+                    "src": "655:4:2"
                   }
                 ],
-                "id": 92,
+                "id": 236,
                 "name": "ParameterList",
-                "src": "628:24:1"
+                "src": "654:6:2"
               },
               {
                 "children": [
                   {
+                    "attributes": {
+                      "assignments": [
+                        238
+                      ]
+                    },
                     "children": [
                       {
                         "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "+=",
-                          "type": "struct MaintenanceContract.Device storage pointer",
                           "constant": false,
                           "name": "d",
-                          "scope": 121,
+                          "scope": 265,
                           "stateVariable": false,
-                          "storageLocation": "default",
+                          "storageLocation": "storage",
+                          "type": "struct MaintenanceContract.Device storage pointer",
                           "value": null,
                           "visibility": "internal"
                         },
                         "children": [
                           {
                             "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": true,
-                              "isPure": false,
-                              "lValueRequested": true,
-                              "member_name": "totalUsedHours",
-                              "referencedDeclaration": 61,
-                              "type": "struct MaintenanceContract.Device storage pointer",
                               "contractScope": null,
-                              "name": "Device"
+                              "name": "Device",
+                              "referencedDeclaration": 205,
+                              "type": "struct MaintenanceContract.Device storage pointer"
                             },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "isConstant": false,
-                                  "isLValue": true,
-                                  "isPure": false,
-                                  "lValueRequested": false,
-                                  "type": "struct MaintenanceContract.Device storage ref"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 14,
-                                      "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
-                                      "value": "devices"
-                                    },
-                                    "id": 42,
-                                    "name": "Identifier",
-                                    "src": "657:7:0"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 35,
-                                      "type": "uint256",
-                                      "value": "deviceId"
-                                    },
-                                    "id": 43,
-                                    "name": "Identifier",
-                                    "src": "665:8:0"
-                                  }
-                                ],
-                                "id": 44,
-                                "name": "IndexAccess",
-                                "src": "657:17:0"
-                              }
-                            ],
-                            "id": 93,
+                            "id": 237,
                             "name": "UserDefinedTypeName",
-                            "src": "664:6:1"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 37,
-                              "type": "uint256",
-                              "value": "hoursUsed"
-                            },
-                            "id": 46,
-                            "name": "Identifier",
-                            "src": "693:9:0"
+                            "src": "672:6:2"
                           }
                         ],
-                        "id": 94,
+                        "id": 238,
                         "name": "VariableDeclaration",
-                        "src": "664:8:1"
+                        "src": "672:16:2"
                       },
                       {
                         "attributes": {
@@ -866,13 +773,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 65,
+                              "referencedDeclaration": 209,
                               "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
                               "value": "devices"
                             },
-                            "id": 95,
+                            "id": 239,
                             "name": "Identifier",
-                            "src": "675:7:1"
+                            "src": "691:7:2"
                           },
                           {
                             "attributes": {
@@ -880,28 +787,23 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 86,
+                              "referencedDeclaration": 230,
                               "type": "uint256",
                               "value": "deviceId"
                             },
-                            "id": 96,
+                            "id": 240,
                             "name": "Identifier",
-                            "src": "683:8:1"
+                            "src": "699:8:2"
                           }
                         ],
-                        "id": 97,
+                        "id": 241,
                         "name": "IndexAccess",
-                        "src": "675:17:1"
+                        "src": "691:17:2"
                       }
                     ],
-                    "id": 98,
+                    "id": 242,
                     "name": "VariableDeclarationStatement",
-                    "src": "664:28:1",
-                    "attributes": {
-                      "assignments": [
-                        94
-                      ]
-                    }
+                    "src": "672:36:2"
                   },
                   {
                     "children": [
@@ -924,7 +826,41 @@
                               "isPure": false,
                               "lValueRequested": true,
                               "member_name": "totalUsedHours",
-                              "referencedDeclaration": 56,
+                              "referencedDeclaration": 200,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 238,
+                                  "type": "struct MaintenanceContract.Device storage pointer",
+                                  "value": "d"
+                                },
+                                "id": 243,
+                                "name": "Identifier",
+                                "src": "719:1:2"
+                              }
+                            ],
+                            "id": 245,
+                            "name": "MemberAccess",
+                            "src": "719:16:2"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "+",
                               "type": "uint256"
                             },
                             "children": [
@@ -935,84 +871,8 @@
                                   "isLValue": true,
                                   "isPure": false,
                                   "lValueRequested": false,
-                                  "type": "struct MaintenanceContract.Device storage pointer",
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 94,
-                                  "value": "d"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 14,
-                                      "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
-                                      "value": "devices"
-                                    },
-                                    "id": 49,
-                                    "name": "Identifier",
-                                    "src": "713:7:0"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 35,
-                                      "type": "uint256",
-                                      "value": "deviceId"
-                                    },
-                                    "id": 50,
-                                    "name": "Identifier",
-                                    "src": "721:8:0"
-                                  }
-                                ],
-                                "id": 99,
-                                "name": "Identifier",
-                                "src": "703:1:1"
-                              }
-                            ],
-                            "id": 101,
-                            "name": "MemberAccess",
-                            "src": "703:16:1"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 37,
-                              "type": "uint256",
-                              "value": "hoursUsed",
-                              "commonType": {
-                                "typeIdentifier": "t_uint256",
-                                "typeString": "uint256"
-                              },
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": false,
-                              "lValueRequested": false,
-                              "operator": "+"
-                            },
-                            "id": 105,
-                            "name": "BinaryOperation",
-                            "src": "722:28:1",
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "isConstant": false,
-                                  "isLValue": true,
-                                  "isPure": false,
-                                  "lValueRequested": false,
                                   "member_name": "totalUsedHours",
-                                  "referencedDeclaration": 56,
+                                  "referencedDeclaration": 200,
                                   "type": "uint256"
                                 },
                                 "children": [
@@ -1022,18 +882,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 94,
+                                      "referencedDeclaration": 238,
                                       "type": "struct MaintenanceContract.Device storage pointer",
                                       "value": "d"
                                     },
-                                    "id": 102,
+                                    "id": 246,
                                     "name": "Identifier",
-                                    "src": "722:1:1"
+                                    "src": "738:1:2"
                                   }
                                 ],
-                                "id": 103,
+                                "id": 247,
                                 "name": "MemberAccess",
-                                "src": "722:16:1"
+                                "src": "738:16:2"
                               },
                               {
                                 "attributes": {
@@ -1041,30 +901,30 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 88,
+                                  "referencedDeclaration": 232,
                                   "type": "uint256",
                                   "value": "hoursUsed"
                                 },
-                                "id": 104,
+                                "id": 248,
                                 "name": "Identifier",
-                                "src": "741:9:1"
+                                "src": "757:9:2"
                               }
-                            ]
+                            ],
+                            "id": 249,
+                            "name": "BinaryOperation",
+                            "src": "738:28:2"
                           }
                         ],
-                        "id": 106,
+                        "id": 250,
                         "name": "Assignment",
-                        "src": "703:47:1"
+                        "src": "719:47:2"
                       }
                     ],
-                    "id": 107,
+                    "id": 251,
                     "name": "ExpressionStatement",
-                    "src": "703:47:1"
+                    "src": "719:47:2"
                   },
                   {
-                    "attributes": {
-                      "functionReturnParameters": 41
-                    },
                     "children": [
                       {
                         "attributes": {
@@ -1073,10 +933,8 @@
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
-                          "member_name": "totalUsedHours",
-                          "referencedDeclaration": 5,
-                          "type": "uint256",
-                          "operator": "="
+                          "operator": "=",
+                          "type": "uint256"
                         },
                         "children": [
                           {
@@ -1086,9 +944,9 @@
                               "isLValue": true,
                               "isPure": false,
                               "lValueRequested": true,
-                              "type": "uint256",
                               "member_name": "hoursSinceLastInspection",
-                              "referencedDeclaration": 58
+                              "referencedDeclaration": 202,
+                              "type": "uint256"
                             },
                             "children": [
                               {
@@ -1097,32 +955,18 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 94,
+                                  "referencedDeclaration": 238,
                                   "type": "struct MaintenanceContract.Device storage pointer",
                                   "value": "d"
                                 },
-                                "id": 108,
+                                "id": 252,
                                 "name": "Identifier",
-                                "src": "761:1:1"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 35,
-                                  "type": "uint256",
-                                  "value": "deviceId"
-                                },
-                                "id": 57,
-                                "name": "Identifier",
-                                "src": "794:8:0"
+                                "src": "777:1:2"
                               }
                             ],
-                            "id": 110,
+                            "id": 254,
                             "name": "MemberAccess",
-                            "src": "761:26:1"
+                            "src": "777:26:2"
                           },
                           {
                             "attributes": {
@@ -1147,7 +991,7 @@
                                   "isPure": false,
                                   "lValueRequested": false,
                                   "member_name": "hoursSinceLastInspection",
-                                  "referencedDeclaration": 58,
+                                  "referencedDeclaration": 202,
                                   "type": "uint256"
                                 },
                                 "children": [
@@ -1157,18 +1001,18 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 94,
+                                      "referencedDeclaration": 238,
                                       "type": "struct MaintenanceContract.Device storage pointer",
                                       "value": "d"
                                     },
-                                    "id": 111,
+                                    "id": 255,
                                     "name": "Identifier",
-                                    "src": "790:1:1"
+                                    "src": "806:1:2"
                                   }
                                 ],
-                                "id": 112,
+                                "id": 256,
                                 "name": "MemberAccess",
-                                "src": "790:26:1"
+                                "src": "806:26:2"
                               },
                               {
                                 "attributes": {
@@ -1176,122 +1020,32 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 88,
+                                  "referencedDeclaration": 232,
                                   "type": "uint256",
                                   "value": "hoursUsed"
                                 },
-                                "id": 113,
+                                "id": 257,
                                 "name": "Identifier",
-                                "src": "819:9:1"
+                                "src": "835:9:2"
                               }
                             ],
-                            "id": 114,
+                            "id": 258,
                             "name": "BinaryOperation",
-                            "src": "790:38:1"
+                            "src": "806:38:2"
                           }
                         ],
-                        "id": 115,
+                        "id": 259,
                         "name": "Assignment",
-                        "src": "761:67:1"
+                        "src": "777:67:2"
                       }
                     ],
-                    "id": 116,
+                    "id": 260,
                     "name": "ExpressionStatement",
-                    "src": "761:67:1"
-                  },
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": true,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "uint256",
-                          "member_name": "totalUsedHours",
-                          "referencedDeclaration": 56
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": true,
-                              "isPure": false,
-                              "lValueRequested": true,
-                              "type": "struct MaintenanceContract.Device storage pointer",
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 94,
-                              "value": "d"
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 14,
-                                  "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
-                                  "value": "devices"
-                                },
-                                "id": 66,
-                                "name": "Identifier",
-                                "src": "847:7:0"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 35,
-                                  "type": "uint256",
-                                  "value": "deviceId"
-                                },
-                                "id": 67,
-                                "name": "Identifier",
-                                "src": "855:8:0"
-                              }
-                            ],
-                            "id": 117,
-                            "name": "Identifier",
-                            "src": "880:1:1"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 43,
-                              "type": "struct MaintenanceContract.Device storage pointer",
-                              "value": "d"
-                            },
-                            "id": 69,
-                            "name": "Identifier",
-                            "src": "867:1:0"
-                          }
-                        ],
-                        "id": 118,
-                        "name": "MemberAccess",
-                        "src": "880:16:1"
-                      }
-                    ],
-                    "id": 119,
-                    "name": "Return",
-                    "src": "873:23:1",
-                    "attributes": {
-                      "functionReturnParameters": 92
-                    }
+                    "src": "777:67:2"
                   },
                   {
                     "attributes": {
-                      "functionReturnParameters": 41
+                      "functionReturnParameters": 236
                     },
                     "children": [
                       {
@@ -1302,7 +1056,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "member_name": "totalUsedHours",
-                          "referencedDeclaration": 5,
+                          "referencedDeclaration": 200,
                           "type": "uint256"
                         },
                         "children": [
@@ -1312,33 +1066,33 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 43,
+                              "referencedDeclaration": 238,
                               "type": "struct MaintenanceContract.Device storage pointer",
                               "value": "d"
                             },
-                            "id": 72,
+                            "id": 261,
                             "name": "Identifier",
-                            "src": "886:1:0"
+                            "src": "896:1:2"
                           }
                         ],
-                        "id": 73,
+                        "id": 262,
                         "name": "MemberAccess",
-                        "src": "886:16:0"
+                        "src": "896:16:2"
                       }
                     ],
-                    "id": 74,
+                    "id": 263,
                     "name": "Return",
-                    "src": "879:23:0"
+                    "src": "889:23:2"
                   }
                 ],
-                "id": 120,
+                "id": 264,
                 "name": "Block",
-                "src": "653:251:1"
+                "src": "661:259:2"
               }
             ],
-            "id": 121,
+            "id": 265,
             "name": "FunctionDefinition",
-            "src": "559:345:1"
+            "src": "585:335:2"
           },
           {
             "attributes": {
@@ -1348,9 +1102,9 @@
               "modifiers": [
                 null
               ],
-              "name": "resetInspectionHoursOfDevice",
+              "name": "getHoursSinceLastInspectionById",
               "payable": false,
-              "scope": 148,
+              "scope": 309,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1362,7 +1116,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "deviceId",
-                      "scope": 134,
+                      "scope": 282,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1375,19 +1129,235 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 122,
+                        "id": 266,
                         "name": "ElementaryTypeName",
-                        "src": "950:4:1"
+                        "src": "969:4:2"
                       }
                     ],
-                    "id": 123,
+                    "id": 267,
                     "name": "VariableDeclaration",
-                    "src": "950:13:1"
+                    "src": "969:13:2"
                   }
                 ],
-                "id": 124,
+                "id": 268,
                 "name": "ParameterList",
-                "src": "949:15:1"
+                "src": "968:15:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 282,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 269,
+                        "name": "ElementaryTypeName",
+                        "src": "1000:4:2"
+                      }
+                    ],
+                    "id": 270,
+                    "name": "VariableDeclaration",
+                    "src": "1000:4:2"
+                  }
+                ],
+                "id": 271,
+                "name": "ParameterList",
+                "src": "999:6:2"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        273
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "hrs",
+                          "scope": 282,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 272,
+                            "name": "ElementaryTypeName",
+                            "src": "1017:4:2"
+                          }
+                        ],
+                        "id": 273,
+                        "name": "VariableDeclaration",
+                        "src": "1017:9:2"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "hoursSinceLastInspection",
+                          "referencedDeclaration": 202,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct MaintenanceContract.Device storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 209,
+                                  "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
+                                  "value": "devices"
+                                },
+                                "id": 274,
+                                "name": "Identifier",
+                                "src": "1029:7:2"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 267,
+                                  "type": "uint256",
+                                  "value": "deviceId"
+                                },
+                                "id": 275,
+                                "name": "Identifier",
+                                "src": "1037:8:2"
+                              }
+                            ],
+                            "id": 276,
+                            "name": "IndexAccess",
+                            "src": "1029:17:2"
+                          }
+                        ],
+                        "id": 277,
+                        "name": "MemberAccess",
+                        "src": "1029:42:2"
+                      }
+                    ],
+                    "id": 278,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1017:54:2"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 271
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 273,
+                          "type": "uint256",
+                          "value": "hrs"
+                        },
+                        "id": 279,
+                        "name": "Identifier",
+                        "src": "1089:3:2"
+                      }
+                    ],
+                    "id": 280,
+                    "name": "Return",
+                    "src": "1082:10:2"
+                  }
+                ],
+                "id": 281,
+                "name": "Block",
+                "src": "1006:94:2"
+              }
+            ],
+            "id": 282,
+            "name": "FunctionDefinition",
+            "src": "928:172:2"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "resetInspectionHoursOfDevice",
+              "payable": false,
+              "scope": 309,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "deviceId",
+                      "scope": 295,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 283,
+                        "name": "ElementaryTypeName",
+                        "src": "1146:4:2"
+                      }
+                    ],
+                    "id": 284,
+                    "name": "VariableDeclaration",
+                    "src": "1146:13:2"
+                  }
+                ],
+                "id": 285,
+                "name": "ParameterList",
+                "src": "1145:15:2"
               },
               {
                 "attributes": {
@@ -1396,9 +1366,9 @@
                   ]
                 },
                 "children": [],
-                "id": 125,
+                "id": 286,
                 "name": "ParameterList",
-                "src": "972:0:1"
+                "src": "1168:0:2"
               },
               {
                 "children": [
@@ -1423,7 +1393,7 @@
                               "isPure": false,
                               "lValueRequested": true,
                               "member_name": "hoursSinceLastInspection",
-                              "referencedDeclaration": 58,
+                              "referencedDeclaration": 202,
                               "type": "uint256"
                             },
                             "children": [
@@ -1443,13 +1413,13 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 65,
+                                      "referencedDeclaration": 209,
                                       "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
                                       "value": "devices"
                                     },
-                                    "id": 126,
+                                    "id": 287,
                                     "name": "Identifier",
-                                    "src": "983:7:1"
+                                    "src": "1179:7:2"
                                   },
                                   {
                                     "attributes": {
@@ -1457,23 +1427,23 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 123,
+                                      "referencedDeclaration": 284,
                                       "type": "uint256",
                                       "value": "deviceId"
                                     },
-                                    "id": 127,
+                                    "id": 288,
                                     "name": "Identifier",
-                                    "src": "991:8:1"
+                                    "src": "1187:8:2"
                                   }
                                 ],
-                                "id": 128,
+                                "id": 289,
                                 "name": "IndexAccess",
-                                "src": "983:17:1"
+                                "src": "1179:17:2"
                               }
                             ],
-                            "id": 129,
+                            "id": 290,
                             "name": "MemberAccess",
-                            "src": "983:42:1"
+                            "src": "1179:42:2"
                           },
                           {
                             "attributes": {
@@ -1488,29 +1458,29 @@
                               "type": "int_const 0",
                               "value": "0"
                             },
-                            "id": 130,
+                            "id": 291,
                             "name": "Literal",
-                            "src": "1028:1:1"
+                            "src": "1224:1:2"
                           }
                         ],
-                        "id": 131,
+                        "id": 292,
                         "name": "Assignment",
-                        "src": "983:46:1"
+                        "src": "1179:46:2"
                       }
                     ],
-                    "id": 132,
+                    "id": 293,
                     "name": "ExpressionStatement",
-                    "src": "983:46:1"
+                    "src": "1179:46:2"
                   }
                 ],
-                "id": 133,
+                "id": 294,
                 "name": "Block",
-                "src": "972:65:1"
+                "src": "1168:65:2"
               }
             ],
-            "id": 134,
+            "id": 295,
             "name": "FunctionDefinition",
-            "src": "912:125:1"
+            "src": "1108:125:2"
           },
           {
             "attributes": {
@@ -1522,7 +1492,7 @@
               ],
               "name": "deactivateDeviceById",
               "payable": false,
-              "scope": 148,
+              "scope": 309,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1534,7 +1504,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "deviceId",
-                      "scope": 147,
+                      "scope": 308,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1547,19 +1517,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 135,
+                        "id": 296,
                         "name": "ElementaryTypeName",
-                        "src": "1229:4:1"
+                        "src": "1541:4:2"
                       }
                     ],
-                    "id": 136,
+                    "id": 297,
                     "name": "VariableDeclaration",
-                    "src": "1229:13:1"
+                    "src": "1541:13:2"
                   }
                 ],
-                "id": 137,
+                "id": 298,
                 "name": "ParameterList",
-                "src": "1228:15:1"
+                "src": "1540:15:2"
               },
               {
                 "attributes": {
@@ -1567,37 +1537,10 @@
                     null
                   ]
                 },
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "totalUsedHours",
-                      "scope": 102,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint",
-                          "type": "uint256"
-                        },
-                        "id": 93,
-                        "name": "ElementaryTypeName",
-                        "src": "1108:4:0"
-                      }
-                    ],
-                    "id": 94,
-                    "name": "VariableDeclaration",
-                    "src": "1108:19:0"
-                  }
-                ],
-                "id": 138,
+                "children": [],
+                "id": 299,
                 "name": "ParameterList",
-                "src": "1251:0:1"
+                "src": "1563:0:2"
               },
               {
                 "children": [
@@ -1611,17 +1554,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "operator": "=",
-                          "type": "bool",
-                          "constant": false,
-                          "name": "h",
-                          "scope": 105,
-                          "stateVariable": false,
-                          "storageLocation": "default",
-                          "typeName": null,
-                          "value": null,
-                          "visibility": "internal",
-                          "member_name": "totalUsedHours",
-                          "referencedDeclaration": 5
+                          "type": "bool"
                         },
                         "children": [
                           {
@@ -1632,330 +1565,7 @@
                               "isPure": false,
                               "lValueRequested": true,
                               "member_name": "active",
-                              "referencedDeclaration": 60,
-                              "type": "bool"
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "isConstant": false,
-                                  "isLValue": true,
-                                  "isPure": false,
-                                  "lValueRequested": false,
-                                  "type": "struct MaintenanceContract.Device storage ref",
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 14,
-                                  "value": "devices"
-                                },
-                                "children": [
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 65,
-                                      "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
-                                      "value": "devices"
-                                    },
-                                    "id": 139,
-                                    "name": "Identifier",
-                                    "src": "1262:7:1"
-                                  },
-                                  {
-                                    "attributes": {
-                                      "argumentTypes": null,
-                                      "overloadedDeclarations": [
-                                        null
-                                      ],
-                                      "referencedDeclaration": 136,
-                                      "type": "uint256",
-                                      "value": "deviceId"
-                                    },
-                                    "id": 140,
-                                    "name": "Identifier",
-                                    "src": "1270:8:1"
-                                  }
-                                ],
-                                "id": 141,
-                                "name": "IndexAccess",
-                                "src": "1262:17:1"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 91,
-                                  "type": "uint256",
-                                  "value": "deviceId"
-                                },
-                                "id": 97,
-                                "name": "Identifier",
-                                "src": "1155:8:0"
-                              }
-                            ],
-                            "id": 142,
-                            "name": "MemberAccess",
-                            "src": "1262:24:1"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "hexvalue": "66616c7365",
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "lValueRequested": false,
-                              "subdenomination": null,
-                              "token": "bool",
-                              "type": "bool",
-                              "value": "false"
-                            },
-                            "id": 143,
-                            "name": "Literal",
-                            "src": "1289:5:1"
-                          }
-                        ],
-                        "id": 144,
-                        "name": "Assignment",
-                        "src": "1262:32:1"
-                      },
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": true,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "member_name": "totalUsedHours",
-                          "referencedDeclaration": 5,
-                          "type": "uint256"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": true,
-                              "isPure": false,
-                              "lValueRequested": false,
-                              "type": "struct MaintenanceContract.Device storage ref"
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 14,
-                                  "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
-                                  "value": "devices"
-                                },
-                                "id": 97,
-                                "name": "Identifier",
-                                "src": "1144:7:0"
-                              },
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 91,
-                                  "type": "uint256",
-                                  "value": "deviceId"
-                                },
-                                "id": 98,
-                                "name": "Identifier",
-                                "src": "1152:8:0"
-                              }
-                            ],
-                            "id": 99,
-                            "name": "IndexAccess",
-                            "src": "1144:17:0"
-                          }
-                        ],
-                        "id": 100,
-                        "name": "MemberAccess",
-                        "src": "1144:32:0"
-                      }
-                    ],
-                    "id": 145,
-                    "name": "ExpressionStatement",
-                    "src": "1262:32:1",
-                    "attributes": {
-                      "assignments": [
-                        96
-                      ],
-                      "functionReturnParameters": 95
-                    }
-                  },
-                  {
-                    "attributes": {
-                      "functionReturnParameters": 95
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "overloadedDeclarations": [
-                            null
-                          ],
-                          "referencedDeclaration": 96,
-                          "type": "uint256",
-                          "value": "h"
-                        },
-                        "id": 102,
-                        "name": "Identifier",
-                        "src": "1195:1:0"
-                      }
-                    ],
-                    "id": 103,
-                    "name": "Return",
-                    "src": "1188:8:0"
-                  }
-                ],
-                "id": 146,
-                "name": "Block",
-                "src": "1251:51:1"
-              }
-            ],
-            "id": 147,
-            "name": "FunctionDefinition",
-            "src": "1199:103:1"
-          },
-          {
-            "attributes": {
-              "constant": false,
-              "implemented": true,
-              "isConstructor": false,
-              "modifiers": [
-                null
-              ],
-              "name": "deactivateDeviceById",
-              "payable": false,
-              "scope": 116,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "deviceId",
-                      "scope": 115,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint",
-                          "type": "uint256"
-                        },
-                        "id": 103,
-                        "name": "ElementaryTypeName",
-                        "src": "1226:4:0"
-                      }
-                    ],
-                    "id": 104,
-                    "name": "VariableDeclaration",
-                    "src": "1226:13:0"
-                  }
-                ],
-                "id": 105,
-                "name": "ParameterList",
-                "src": "1225:15:0"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "myDevice",
-                      "scope": 103,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "struct MaintenanceContract.Device memory",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "contractScope": null,
-                          "name": "Device",
-                          "referencedDeclaration": 10,
-                          "type": "struct MaintenanceContract.Device storage pointer"
-                        },
-                        "id": 92,
-                        "name": "UserDefinedTypeName",
-                        "src": "1159:6:0"
-                      }
-                    ],
-                    "id": 93,
-                    "name": "VariableDeclaration",
-                    "src": "1159:15:0"
-                  }
-                ],
-                "id": 106,
-                "name": "ParameterList",
-                "src": "1248:0:0",
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                }
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "assignments": [
-                        95
-                      ]
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "constant": false,
-                          "name": "d",
-                          "scope": 103,
-                          "stateVariable": false,
-                          "storageLocation": "default",
-                          "type": "bool",
-                          "typeName": null,
-                          "value": null,
-                          "visibility": "internal",
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "="
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": true,
-                              "isPure": false,
-                              "lValueRequested": true,
-                              "member_name": "active",
-                              "referencedDeclaration": 9,
+                              "referencedDeclaration": 204,
                               "type": "bool"
                             },
                             "children": [
@@ -1975,13 +1585,13 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 14,
+                                      "referencedDeclaration": 209,
                                       "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
                                       "value": "devices"
                                     },
-                                    "id": 107,
+                                    "id": 300,
                                     "name": "Identifier",
-                                    "src": "1259:7:0"
+                                    "src": "1574:7:2"
                                   },
                                   {
                                     "attributes": {
@@ -1989,23 +1599,23 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 104,
+                                      "referencedDeclaration": 297,
                                       "type": "uint256",
                                       "value": "deviceId"
                                     },
-                                    "id": 108,
+                                    "id": 301,
                                     "name": "Identifier",
-                                    "src": "1267:8:0"
+                                    "src": "1582:8:2"
                                   }
                                 ],
-                                "id": 109,
+                                "id": 302,
                                 "name": "IndexAccess",
-                                "src": "1259:17:0"
+                                "src": "1574:17:2"
                               }
                             ],
-                            "id": 110,
+                            "id": 303,
                             "name": "MemberAccess",
-                            "src": "1259:24:0"
+                            "src": "1574:24:2"
                           },
                           {
                             "attributes": {
@@ -2020,106 +1630,39 @@
                               "type": "bool",
                               "value": "false"
                             },
-                            "id": 111,
+                            "id": 304,
                             "name": "Literal",
-                            "src": "1286:5:0"
+                            "src": "1601:5:2"
                           }
                         ],
-                        "id": 112,
+                        "id": 305,
                         "name": "Assignment",
-                        "src": "1259:32:0"
-                      },
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": true,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "type": "struct MaintenanceContract.Device storage ref"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 14,
-                              "type": "mapping(uint256 => struct MaintenanceContract.Device storage ref)",
-                              "value": "devices"
-                            },
-                            "id": 96,
-                            "name": "Identifier",
-                            "src": "1195:7:0"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 90,
-                              "type": "uint256",
-                              "value": "deviceId"
-                            },
-                            "id": 97,
-                            "name": "Identifier",
-                            "src": "1203:8:0"
-                          }
-                        ],
-                        "id": 98,
-                        "name": "IndexAccess",
-                        "src": "1195:17:0"
+                        "src": "1574:32:2"
                       }
                     ],
-                    "id": 113,
+                    "id": 306,
                     "name": "ExpressionStatement",
-                    "src": "1259:32:0"
-                  },
-                  {
-                    "attributes": {
-                      "functionReturnParameters": 94
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "overloadedDeclarations": [
-                            null
-                          ],
-                          "referencedDeclaration": 95,
-                          "type": "struct MaintenanceContract.Device storage pointer",
-                          "value": "d"
-                        },
-                        "id": 100,
-                        "name": "Identifier",
-                        "src": "1230:1:0"
-                      }
-                    ],
-                    "id": 101,
-                    "name": "Return",
-                    "src": "1223:8:0"
+                    "src": "1574:32:2"
                   }
                 ],
-                "id": 114,
+                "id": 307,
                 "name": "Block",
-                "src": "1248:51:0"
+                "src": "1563:51:2"
               }
             ],
-            "id": 115,
+            "id": 308,
             "name": "FunctionDefinition",
-            "src": "1196:103:0"
+            "src": "1511:103:2"
           }
         ],
-        "id": 148,
+        "id": 309,
         "name": "ContractDefinition",
-        "src": "75:1232:1"
+        "src": "75:1998:2"
       }
     ],
-    "id": 149,
+    "id": 310,
     "name": "SourceUnit",
-    "src": "0:1309:1"
+    "src": "0:2075:2"
   },
   "compiler": {
     "name": "solc",
@@ -2129,14 +1672,9 @@
     "72": {
       "events": {},
       "links": {},
-      "address": "0x8bbfa08dfdd9447685ff989337297375560e8a1c"
-    },
-    "4447": {
-      "events": {},
-      "links": {},
-      "address": "0x8f0483125fcb9aaaefa9209d8e9d7b9c8b9fb90f"
+      "address": "0xabe5ba1679b30b5e9874bacc5844b93eda1e72b8"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-25T19:58:55.394Z"
+  "updatedAt": "2017-11-26T10:33:27.695Z"
 }
