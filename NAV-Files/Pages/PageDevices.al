@@ -31,6 +31,11 @@ page 50120 "Insp. Devices"
                     ApplicationArea = all;
                     Editable = False; 
                 }
+                field("Actual Owner";"Actual Owner")
+                {
+                    ApplicationArea = all;
+                    Editable = False; 
+                }
                 
             }
         }
@@ -39,10 +44,10 @@ page 50120 "Insp. Devices"
     {
         area(processing)
         {
-            action("Show Device ID")
+            action("Get Actual Owner ID")
              {   
                 Image = CheckDuplicates;
-                PromotedCategory = Category8;
+                
                 Promoted = true;
                 ApplicationArea = All; 
             
@@ -51,8 +56,59 @@ page 50120 "Insp. Devices"
                 WebServiceBlock : Codeunit BlockChainWebservice; 
                 
                 begin
-                  WebServiceBlock.CallWebservice(1);  
+                  
+                  
+                  WebServiceBlock.CallWebserviceGetOwnerByID("No.","No.");
+                  
                     
+                end;
+            }
+            Action("Add Device")
+             {   
+                Image = CheckDuplicates;
+                
+                Promoted = true;
+                ApplicationArea = All; 
+            
+                trigger OnAction();
+                var 
+                WebServiceBlock : Codeunit BlockChainWebservice; 
+                
+                begin 
+                  WebServiceBlock.CallWebserviceAdddevice("No.","No.",Name);                    
+                end;
+            }
+            
+            Action("Get Service Hours")
+             {   
+                Image = CheckDuplicates;
+                
+                Promoted = true;
+                ApplicationArea = All; 
+            
+                trigger OnAction();
+                var 
+                WebServiceBlock : Codeunit BlockChainWebservice; 
+                
+                begin 
+                  WebServiceBlock.CallWebservicegetHoursSinceLastInspectionById("No.","No.");  
+                                
+                end;
+            }
+             Action("Reset Service Hours")
+             {   
+                Image = CheckDuplicates;
+                
+                Promoted = true;
+                ApplicationArea = All; 
+            
+                trigger OnAction();
+                var 
+                WebServiceBlock : Codeunit BlockChainWebservice; 
+                
+                begin 
+                  WebServiceBlock.CallWebserviceresetInspectionHoursOfDevice("No.","No.");  
+                                
                 end;
             }
         }

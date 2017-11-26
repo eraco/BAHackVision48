@@ -15,6 +15,10 @@ table 50120 "Insp. Device"
         {
             Editable = False; 
         }
+        field(14;"Actual Owner";Text[250])
+        {
+            Editable = False; 
+        }
     }
 
     keys

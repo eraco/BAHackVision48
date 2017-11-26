@@ -32,7 +32,81 @@ page 50121 "Insp. Device Card"
                     ApplicationArea = all;
                     Editable = False; 
                 }
+                field("Actual Owner";"Actual Owner")
+                {
+                    ApplicationArea = all;
+                    Editable = False; 
+                }
                
+            }
+        }
+    }
+    actions
+    {
+        area(processing)
+        {
+                        action("Get Actual Owner ID")
+             {   
+                Image = CheckDuplicates;
+                Promoted = true;
+                ApplicationArea = All; 
+            
+                trigger OnAction();
+                var 
+                WebServiceBlock : Codeunit BlockChainWebservice; 
+                
+                begin
+                  
+                  
+                  WebServiceBlock.CallWebserviceGetOwnerByID("No.","No.");
+                  
+                    
+                end;
+            }
+            Action("Add Device")
+             {   
+                Image = CheckDuplicates;
+                Promoted = true;
+                ApplicationArea = All; 
+            
+                trigger OnAction();
+                var 
+                WebServiceBlock : Codeunit BlockChainWebservice; 
+                
+                begin 
+                  WebServiceBlock.CallWebserviceAdddevice("No.","No.",Name);                    
+                end;
+            }
+            
+            Action("Get Service Hours")
+             {   
+                Image = CheckDuplicates;
+                Promoted = true;
+                ApplicationArea = All; 
+            
+                trigger OnAction();
+                var 
+                WebServiceBlock : Codeunit BlockChainWebservice; 
+                
+                begin 
+                  WebServiceBlock.CallWebservicegetHoursSinceLastInspectionById("No.","No.");  
+                                
+                end;
+            }
+             Action("Reset Service Hours")
+             {   
+                Image = CheckDuplicates;
+                Promoted = true;
+                ApplicationArea = All; 
+            
+                trigger OnAction();
+                var 
+                WebServiceBlock : Codeunit BlockChainWebservice; 
+                
+                begin 
+                  WebServiceBlock.CallWebserviceresetInspectionHoursOfDevice("No.","No.");  
+                                
+                end;
             }
         }
     }
