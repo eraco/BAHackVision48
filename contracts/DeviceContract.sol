@@ -34,6 +34,10 @@ contract DeviceContract {
         devices[deviceId].hoursSinceLastInspection = 0;
     }
 
+    function getDeviceById(uint deviceId) public returns(Device) {
+        return devices[deviceId];
+    }
+
     /*function getTotalUsedHoursById(uint deviceId) public returns (uint totalUsedHours) {
         return devices[deviceId].totalUsedHours; 
     }*/

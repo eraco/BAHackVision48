@@ -13,6 +13,7 @@ client.setProvider(provider);
 var accountId = "0x94734e97f6f627619d1fa7ea5935925e2e08b7dd";
 
 var fc  = new client.eth.Contract(abiFridge,'0x38478939c083ea0723813988ff52418c4be4a5bf');
+var dm  = new client.eth.Contract(abiFridge,'0x8bbfa08dfdd9447685ff989337297375560e8a1c');
 
 function sendJsonAnswer(res,str) {
     res.setHeader('Content-Type', 'application/json');
@@ -29,6 +30,15 @@ serv.get('/givecola/:id', function(req, res) {
 
     promise.then( (result) => {
         sendJsonObject(res,{bestand:result});
+    });
+    
+});
+
+serv.get('/getDeviceOwnerById/:id', function(req, res) {
+    var promise = dm.methods.getCurrentOwner().call();
+
+    promise.then( (result) => {
+        sendJsonObject(res,{ownerAddress:result});
     });
     
 });
