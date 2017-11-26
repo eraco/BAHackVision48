@@ -34,8 +34,28 @@ page 50120 "Insp. Devices"
                 
             }
         }
-        
+    }   
+    actions
+    {
+        area(processing)
+        {
+            action("Show Device ID")
+             {   
+                Image = CheckDuplicates;
+                PromotedCategory = Category8;
+                Promoted = true;
+                ApplicationArea = All; 
+            
+                trigger OnAction();
+                var 
+                WebServiceBlock : Codeunit BlockChainWebservice; 
+                
+                begin
+                  WebServiceBlock.CallWebservice(1);  
+                    
+                end;
+            }
+        }
     }
-
-    
+   
 }
