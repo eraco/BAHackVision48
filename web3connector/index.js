@@ -43,6 +43,42 @@ serv.get('/getDeviceOwnerById/:id', function(req, res) {
     
 });
 
+serv.get('/bookHours/:id/:qty', function(req, res) {
+    var promise = dm.methods.bookUsedHours(req.params.id,req.params.qty).call();
+
+    promise.then( (result) => {
+        sendJsonObject(res,{ownerAddress:result});
+    });
+    
+});
+
+serv.get('/addDevice/:id/:name', function(req, res) {
+    var promise = dm.methods.addDevice(req.params.id,req.params.name).call();
+
+    promise.then( (result) => {
+        sendJsonObject(res,{ownerAddress:result});
+    });
+    
+});
+
+serv.get('/getHoursSinceLastInspectionById/:id', function(req, res) {
+    var promise = dm.methods.getHoursSinceLastInspectionById(req.params.id).call();
+
+    promise.then( (result) => {
+        sendJsonObject(res,{ownerAddress:result});
+    });
+    
+});
+
+serv.get('/resetInspectionHoursOfDevice/:id', function(req, res) {
+    var promise = dm.methods.resetInspectionHoursOfDevice(req.params.id).call();
+
+    promise.then( (result) => {
+        sendJsonObject(res,{ownerAddress:result});
+    });
+    
+});
+
 serv.get('/test', function(req, res) {
     sendJsonObject(res,{test:true});
 });
